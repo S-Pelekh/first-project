@@ -1,0 +1,75 @@
+@import "reset";
+$primary: #4985ff;
+$white: #fff;
+$dark: #323232;
+$grey: #999;
+$fs: 16px;
+$baseAlign: center;
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $aaa;
+}
+
+@mixin flex($dir, $justify, $align: $baseAlign) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+%section {
+  width: 100%;
+  background: $primary;
+  height: 400px;
+}
+.button {
+  @include center();
+  background: $primary;
+  color: $white;
+  font-size: $fs;
+}
+
+.more-link {
+  color: $primary;
+  font-size: $fs;
+  @include flex(row, space-between, flex-end);
+}
+
+.description {
+  color: $grey;
+  font-size: $fs;
+  @include flex(column, center);
+}
+.main-heading {
+  color: $white;
+  font-size: $fs * 3;
+}
+
+.small-heading {
+  color: $dark;
+  font-size: $fs + 2;
+  @extend %section;
+}
+
+div.my-div {
+  width: 300px;
+  height: 30px;
+  background: $primary;
+  p.par {
+    height: 20px;
+    > span {
+      color: $white;
+    }
+  }
+  color: $white;
+  &::after {
+    content: "";
+    position: absolute;
+  }
+  @media (max-width: 1024px) {
+    width: 200px;
+    height: 200px;
+  }
+}
