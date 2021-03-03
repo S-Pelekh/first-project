@@ -94,7 +94,7 @@ div.head-text {
 
 .services {
   @include mainCol();
-  @include flex(space-around);
+  @include flex(space-between);
   flex-direction: column;
   height: 703px;
   background: $white;
@@ -124,18 +124,33 @@ div.head-text {
         position: relative;
         box-sizing: border-box;
         .circle-part {
+          position: relative;
           width: 90px;
           height: 90px;
           border-radius: 50%;
           border: 1px solid $primary;
           box-sizing: border-box;
           margin: 10px;
+          img {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 25px;
+            left: 23px;
+          }
         }
       }
       .item-text {
-        width: 226px;
+        width: 222px;
+        margin-top: 55px;
+        margin-left: 20px;
+        h3 {
+          font-size: $fs + 2;
+          margin-bottom: 10px;
+        }
         p {
-          width: 226px;
+          width: 222px;
+          font-size: $fs - 2;
         }
       }
     }
