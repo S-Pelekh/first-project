@@ -8,12 +8,17 @@ $fs: 16px;
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
+// section {
+//   position: relative;
+//   top: -101px;
+// }
 .main {
   height: 900px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(./Rectangle.png);
   position: relative;
-  top: -100px;
+  top: -101px;
+  margin-bottom: -101px;
 }
 @mixin flex($justify: flex-start) {
   display: flex;
@@ -98,6 +103,7 @@ div.head-text {
   flex-direction: column;
   height: 703px;
   background: $white;
+  padding: 110px 0 105px;
 
   h2 {
     color: $dark;
