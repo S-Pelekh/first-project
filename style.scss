@@ -136,7 +136,7 @@ div.head-text {
           border-radius: 50%;
           border: 1px solid $primary;
           box-sizing: border-box;
-          margin: 10px;
+          margin: 9px;
           img {
             position: absolute;
             width: 40px;
@@ -194,6 +194,24 @@ div.head-text {
       height: 400px;
     }
   }
+  .line {
+    width: 1110px;
+    border: 1px solid #e0e0e0;
+    margin: 90px auto 70px;
+  }
+  .standarts-projects {
+    @include mainCol();
+    @include flex(space-between);
+    .standarts-project {
+      @include flex(space-between);
+      flex-wrap: wrap;
+      width: 100px;
+      height: 70px;
+      .project-part {
+        font-size: $fs * 2 + 4;
+      }
+    }
+  }
 }
 
 .project-spec {
@@ -247,6 +265,11 @@ div.head-text {
         }
       }
     }
+  }
+  .line {
+    width: 1110px;
+    border: 1px solid #e0e0e0;
+    margin: 85px auto;
   }
 }
 
@@ -327,17 +350,22 @@ div.head-text {
     .subscribe {
       margin-top: 30px;
       margin-bottom: 35px;
+      position: relative;
       input {
-        width: 299px;
+        position: absolute;
+        width: 489px;
         height: 45px;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
+        left: -148px;
+        border-radius: 30px;
         border: 1px solid #f2f2f2;
         box-sizing: border-box;
         box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
         padding-left: 33px;
+        z-index: -5;
       }
       .button2 {
+        position: relative;
+        left: 150px;
         width: 190px;
         height: 45px;
         background: $primary;
@@ -359,6 +387,9 @@ div.head-text {
     height: 335px;
     .list {
       width: 242px;
+      &:first-child {
+        width: 257px;
+      }
       h3 {
         color: $dark;
         font-size: $fs + 1;
@@ -366,6 +397,9 @@ div.head-text {
       }
       ul {
         height: 150px;
+        list-style-image: url(./ul.png);
+        padding-inline-start: 15px;
+
         li {
           margin-bottom: 30px;
           &:last-child {
